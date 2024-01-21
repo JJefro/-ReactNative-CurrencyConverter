@@ -10,7 +10,8 @@ module.exports = {
         "es2021": true
     },
     "extends": [
-        "plugin:react/recommended"
+        "plugin:react/recommended",
+        "eslint:recommended"
     ],
     "overrides": [
         {
@@ -31,6 +32,9 @@ module.exports = {
     },
     "plugins": [
         "react"
+    ],
+    "ignorePatterns": [
+        "babel.config.js"
     ],
     "rules": {
         "react/jsx-props-no-spreading": 0,
