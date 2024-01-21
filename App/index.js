@@ -1,20 +1,17 @@
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/display-name */
+import React from "react";
+import Navigation from "./config/Navigation";
+import { ConversionContextProvider } from "./util/ConversionContext";
 
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: "#fff",
-        alignItems: "center",
-        justifyContent: "center",
-    },
-});
+import { api } from "./util/api";
 
-export default function App() {
-    return (
-        <View style={styles.container}>
-            <Text>Open up App.js to start working on your app!</Text>
-            <StatusBar style="auto" />
-        </View>
-    );
-}
+api("/latest?base=USD")
+    .then(res => console.log(res))
+    .catch(err => console.log("err", err));
+
+export default () => (
+    <ConversionContextProvider>
+        <Navigation />
+    </ConversionContextProvider>
+);
