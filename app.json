@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "CurrencyConverter",
-    "slug": "CurrencyConverter",
+    "slug": "currencyconverter",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -25,6 +25,12 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "0dcdcc7a-af95-4e52-b82a-9025a48b590c"
+      }
+    },
+    "owner": "jjefro"
   }
 }
